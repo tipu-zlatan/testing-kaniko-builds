@@ -1,5 +1,3 @@
-FROM alpine:latest
-RUN apk update && apk add --no-cache git
-COPY . /app
-WORKDIR /app
-CMD ["python", "app.py"]
+FROM centos:7
+RUN yum -y update
+RUN yum -y install zip unzip
